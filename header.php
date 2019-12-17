@@ -44,17 +44,6 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<div class="site-clock" >
-				<div class="site-clock-icon"> 
-					<img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">
-				</div>
-				<div class="site-clock-content"> 
-					<p><?php echo "String 1"?></p>
-					<p><?php echo "String 2"?></p>
-				</div>
-				
-		</div>
-
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ethiotheme' ); ?></button>
 			<?php
