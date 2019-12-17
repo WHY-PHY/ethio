@@ -1,0 +1,27 @@
+/*custom css */
+
+.site-header {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.site-branding {
+    width: 40%;
+    float: left;
+}
+
+.site-clock {
+    width: 120px;
+    float: left;
+    margin-top: 150px;
+}
+
+.site-clock-icon {
+    width: 130%;
+    float: left;
+}
+
+.site-clock .site-clock-content {
+    width: 70%;
+    float: left;
+}
