@@ -114,27 +114,30 @@ function ethiotheme_scripts() {
 	 '/dist/css/bootstrap.min.css'); 
 
 /**jo */ wp_enqueue_style('ethiotheme-fontawesome', get_template_directory_uri() .
-	 '/font/fontawesome/css/fontawesome.min.css'); 
- 
+	 '/fonts/font-awesome/css/font-awesome.min.css'); 
+   
 
 
 	wp_enqueue_style( 'ethiotheme-style', get_stylesheet_uri() );
+
+	
 /**jo */ wp_register_script('popper', 
 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js', false, '', true);
 
-/**jo */    wp_enquee_script('popper');
+/**jo */    wp_enqueue_script('popper');
 	 
 
-	wp_enqueue_script( 'ethiotheme-tether', get_template_directory_uri() . '/src/js/tether.js', array('jquery'), '20170115', true );
+/**jo */ wp_enqueue_script( 'ethiotheme-tether', get_template_directory_uri() . 
+'/src/js/tether.min.js', array(), '20170115', true );
 
-	wp_enqueue_script( 'ethiotheme-bootstrap', get_template_directory_uri() . '/src/js/bootstrap.min.js', array('jquery'), '20170915', true );
+/**jo */ wp_enqueue_script( 'ethiotheme-bootstrap', get_template_directory_uri() . '/src/js/bootstrap.min.js', array('jquery'), '20170915', true );
 
-	wp_enqueue_script( 'ethiotheme-bootstrap-hover', get_template_directory_uri() . '/src/js/bootstrap-hover.js', array('jquery'), '20170115', true );
+ /**jo */ wp_enqueue_script( 'ethiotheme-bootstrap-hover', get_template_directory_uri() . '/src/js/bootstrap-hover.js', array('jquery'), '20170115', true );
 
-	wp_enqueue_script( 'ethiotheme-nav-scroll', get_template_directory_uri() . '/src/js/nav-scroll.js', array('jquery'), '20170115', true );
+/**jo */ wp_enqueue_script( 'ethiotheme-nav-scroll', get_template_directory_uri() . '/src/js/nav-scroll.js', array('jquery'), '20170115', true );
 
 
-	wp_enqueue_script( 'ethiotheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'ethiotheme-skip-link-focus-fix', get_template_directory_uri() . '/src/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -161,6 +164,16 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * 	Widgets Files.
+ */
+require get_template_directory() . '/inc/widgets.php';
+
+/**
+ * 	Bootstrap navwalker File.
+ */
+require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 
 /**
  * Load Jetpack compatibility file.

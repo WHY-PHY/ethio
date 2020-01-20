@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Register widget area.
  *
@@ -7,7 +8,7 @@
 function ethiotheme_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Right Sidebar', 'ethiotheme' ),
-		'id'            => 'right-sidebar-1',
+		'id'            => 'right-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'ethiotheme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
