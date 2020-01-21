@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ethiotheme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<nav id="menu" class="navbar navbar-expand-md navbar-light role="navigation">
+	<nav id="menu" class="navbar navbar-expand-md navbar-light" role="navigation">
 		<div class="site-branding navbar-brand">
 			<?php
 			the_custom_logo();
@@ -46,7 +46,7 @@
 		</div><!-- .site-branding -->
 
 
-		<button class="navbar-toggle navbar-toggler-right" type="button" data-toggle="collapse"
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 		data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 		</button>
@@ -61,9 +61,10 @@
 			'menu_id'				=> 'main-menu',
 			'menu_class'			=> 'navbar-nav ml-auto',
 			'depth'					=> 2,
-			'fallback_cb'			=> 'bs4navbar::fallback',
+			'fallback_cb'			=> 'bs4navwalker::fallback',
 			'walker'				=> new bs4navwalker()
 		]);
+		
 		?>
 
 		</nav>
